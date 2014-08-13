@@ -1,0 +1,18 @@
+ sudo update-alternatives --config java
+
+python prov-o-matic/src/provomatic/prov.py --prov-outputs blah.txt ls > blah.txt
+
+
+curl -sH "Accept: text/turtle" -L http://dbpedia.org/resource/Amsterdam > adam.ttl
+
+roqet -i sparql -e 'select ?o where {?s <http://www.w3.org/ns/prov#wasDerivedFrom> ?o}' -r csv --data adam.ttl 
+
+java -jar ./wikipedia-provenance/target/wikipedia-provenance-0.0.5-jar-with-dependencies.jar -startid 548577509 -o .  -pAmsterdam
+
+provconvert -infile Amsterdam-startid548577509-r1-u1-d1.ttl -outfile Amsterdam-startid548577509-r1-u1-d1.svg
+
+roqet -i sparql -e 'select * where {?s a <http://www.w3.org/ns/prov#Agent>}' --data Amsterdam-startid548577509-r1-u1-d1.ttl 
+
+roqet -i sparql -e 'select * where {?s a <http://www.w3.org/ns/prov#Entity>}' --data Amsterdam-startid548577509-r1-u1-d1.ttl
+
+roqet -i sparql -e 'select * where {?s a <http://www.w3.org/ns/prov#Activity>}' --data Amsterdam-startid548577509-r1-u1-d1.ttl 
