@@ -57,4 +57,40 @@ To logout of the VM, just type exit
 
 For more commands for using vagrant [see their documentation](http://docs.vagrantup.com/v2/).
 
- 
+The VM has installed the following packages and dependencies:
+
+- [curl](http://en.wikipedia.org/wiki/CURL)
+- [The Redland RDF tools](http://librdf.org)
+- [PROV Toolbox](http://lucmoreau.github.io/ProvToolbox/)
+- [Git2Prov](https://www.npmjs.org/package/git2prov)
+- [Wikipedia Provenance](https://github.com/gambl/wikipedia-provenance)
+
+The VM also sets the appropriate environment variables.l
+
+# PROV Core Concepts
+
+The figure below (taken from the [PROV Primer](http://www.w3.org/TR/prov-primer/)) shows the 3 core classes of PROV and how they are related. The PROV Primer provides more details and a working example. Here, will go with the basics so we can start querying datasets.
+
+![PROV Core Concepts](http://www.w3.org/TR/prov-primer/images/key-concepts.png)
+
+These three classes correspond to three views of provenance.
+
+1. The _data flow view_ helsp us represent the flow of information within a system. Entities are the things we want to describe the provenance of (`prov:Entity`). Entities are derived from other entities (`prov:wasDerivedFrom`). For example, within a version control system, we would describe that each revision as an entity and the newer version was derived from the older revision. e.g. `:newer prov:wasRevisionOf :older`
+
+2. The _process flow view_ helps us represent the processes that took place in a system and associated timing. `prov:Activity` denotes these processes. Activities are related to the information (i.e. entities) they take as input and generate as output. Represented respectively by `prov:used` and `prov:wasGeneratedBy`. For example, we might have a program such as curl take some input (a url) and generate some output (a downloaded web page).
+
+3. The _responsibility view_ helps us represent the assignment of responsibility in a system. Entities or activities that are assigned responsibility are denoted as `prov:Agent.` For example, a person, Bob, might be responsible for a particular web page. The web page's attribution is written as `:webpage prov:wasAttributedTo :bob`. Similarly, the activity of web page creation might also be Bob's responsibility written as `:bob prov:wasAssociatedWith :webPageCreation`
+
+## Querying a simple example
+With these core concepts, let's query the [example from the PROV Primer](http://www.w3.org/TR/prov-primer/#examples-of-key-concepts-in-prov) about a the provenance of an online newspaper article
+
+
+
+
+
+
+# Connecting across data sources
+
+# Reusing queries
+
+#
