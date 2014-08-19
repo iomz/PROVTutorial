@@ -25,7 +25,7 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/
 echo "export LC_ALL=en_US.UTF-8" >> .bashrc
 echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/" >> .bashrc
 echo "export PATH=$PATH:/usr/local/bin/provToolbox/bin" >> .bashrc
-
+echo "update-alternatives --set java /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java" >> .bashrc
 
 curl -O http://search.maven.org/remotecontent?filepath=org/openprovenance/prov/toolbox/0.6.1/toolbox-0.6.1-release.zip
 unzip toolbox-0.6.1-release.zip
