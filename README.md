@@ -206,3 +206,6 @@ Here are some current ideas for projects to do with provenance:
 * Extend [NoWorkflow](https://github.com/gems-uff/noworkflow) to export PROV
 * Do something cool with [the provenance for the National Climate Change Assessment 2014](https://data.globalchange.gov/report/nca3).
 * Do something cool with the Gazette's - the UK's public record - provenance. Checkout [this blog post](http://lucmoreau.wordpress.com/2014/07/22/provenance-in-the-wild-provenance-at-the-gazette/) and the  [DevDocs](https://github.com/TheGazette/DevDocs/blob/master/sparql/sample-queries.md)
+
+___
+prov:wasAttributedTo [Paul Groth](https://twitter.com/pgroth)
