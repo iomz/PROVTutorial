@@ -197,3 +197,11 @@ One nice thing is that the same page is also available in computer parsable form
 * If you're interested in programming with PROV, I suggest the [PROV Python Short Tutorial](http://nbviewer.ipython.org/github/trungdong/notebooks/blob/master/PROV%20Tutorial.ipynb) by Trung Dong Huynh
 * For java fans: the [PROV toolbox](http://lucmoreau.github.io/ProvToolbox/) (installed with the VM) provides a whole API for dealing with PROV
 * The [Provenance Store](https://provenance.ecs.soton.ac.uk/store/) provides a nice API for storing and retriving provenance.
+
+# Some project ideas
+
+Here are some current ideas for projects to do with provenance:
+
+* Extend [NoWorkflow](https://github.com/gems-uff/noworkflow) to export PROV
+* Do something cool with [the provenance for the National Climate Change Assessment 2014](https://data.globalchange.gov/report/nca3).
+* Do something cool with the Gazette's - the UK's public record - provenance. Checkout [this blog post](http://lucmoreau.wordpress.com/2014/07/22/provenance-in-the-wild-provenance-at-the-gazette/) and the  [DevDocs](https://github.com/TheGazette/DevDocs/blob/master/sparql/sample-queries.md)
