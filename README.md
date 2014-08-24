@@ -18,6 +18,7 @@ This tutorial is primarily focused on working with provenance from the web in a 
     * [IPAW 2014](http://www.provbook.org/tutorial/provenanceweek2014/) - from a UML perspective;
     * [ESWC 2013](http://www.w3.org/2001/sw/wiki/ESWC2013ProvTutorial)- from a semantic web perspective;
     * [EDBT 2014](http://practicalprovenance.wordpress.com/2013/03/27/tutorial-prov/) - from a relational perspective.
+    * [Provenance Techniques for CRUD](http://devel.io/2014/08/22/provenance-techniques-for-crud/) - from a web app perspective
 * [PROV Python tutorial](https://github.com/trungdong/notebooks)
 
 #Prerequisites
