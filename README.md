@@ -151,3 +151,32 @@ This demonstrates that by using a common model for provenance, we can write hist
 * This dataset is rather large to visualize, could you extract a subset that can be visualized as a graph?
 
 # Reusing queries
+As we saw in the previous section, by expressing provenance information using a common model, we can use the same constructs to query over provenance from different data sources. In this section, we will apply our provenance to github - version histories for software.
+
+Here we'll use git2prov to convert this PROVTutorial repository to PROV.
+
+     $ git2prov https://github.com/pgroth/PROVTutorial.git PROV-O > provtutorial-git.ttl
+
+Let's use the same query that we used with the wikipedia datasets to get all the agents involved:
+
+     $ roqet -i sparql -e 'select * where {?s a <http://www.w3.org/ns/prov#Agent>. ?s ?p ?o}' -r csv --data provtutorial-git.ttl
+
+Let's do something more complicated. Let's find all the commits and their associated labels:
+
+    $ roqet -i sparql -e 'select * where {?s a <http://www.w3.org/ns/prov#Activity>. ?s <http://www.w3.org/2000/01/rdf-schema#label> ?o}' -r csv --data provtutorial-git.ttl
+
+* What kind of queries would it be useful to run over source code version histories?
+
+You can also experiment with git2prov interactively. Run:
+
+     $ git2prov-server
+
+On your local machine navigate to localhost:8080
+
+In the GIT Repo field, enter the PROVTutorial github url. Click PROV-JSON
+
+Let's take a look at this in a json editor. (An online one is available at http://www.jsoneditoronline.org)
+
+* What are some constructs of interest or that you are curious about?
+
+An interesting thing here is that you can now use this an input to a web visualization tool or to work with programming languages that have JSON support.
