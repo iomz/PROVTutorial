@@ -177,6 +177,23 @@ In the GIT Repo field, enter the PROVTutorial github url. Click PROV-JSON
 
 Let's take a look at this in a json editor. (An online one is available at http://www.jsoneditoronline.org)
 
-* What are some constructs of interest or that you are curious about?
 
 An interesting thing here is that you can now use this an input to a web visualization tool or to work with programming languages that have JSON support.
+
+* What are some constructs of interest or that you are curious about? Can you figure out their usage and what they are for?
+
+# Finding out more
+
+## PROV Namespace page
+All the constructs of PROV are defined in an open namespace. If you navigate to http://www.w3.org/ns/prov - you'll see how the terms that are defined by PROV, their English language definition, and links to their definition in the various specs.
+
+One nice thing is that the same page is also available in computer parsable formats through _content negotiation_. You can grab the XSD and OWL definitions of PROV from this page. Try it out by doing:
+
+    $ curl -sH "Accept: application/xml" -L http://www.w3.org/ns/prov
+
+## Where to go next
+
+* The tutorials and books above can give you more background on the language and uses for the various constructs.
+* If you're interested in programming with PROV, I suggest the [PROV Python Short Tutorial](http://nbviewer.ipython.org/github/trungdong/notebooks/blob/master/PROV%20Tutorial.ipynb) by Trung Dong Huynh
+* For java fans: the [PROV toolbox](http://lucmoreau.github.io/ProvToolbox/) (installed with the VM) provides a whole API for dealing with PROV
+* The [Provenance Store](https://provenance.ecs.soton.ac.uk/store/) provides a nice API for storing and retriving provenance.
