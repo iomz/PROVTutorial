@@ -76,7 +76,7 @@ The figure below (taken from the [PROV Primer](http://www.w3.org/TR/prov-primer/
 
 These three classes correspond to three views of provenance.
 
-1. The _data flow view_ helsp us represent the flow of information within a system. Entities are the things we want to describe the provenance of (`prov:Entity`). Entities are derived from other entities (`prov:wasDerivedFrom`). For example, within a version control system, we would describe that each revision as an entity and the newer version was derived from the older revision. e.g. `:newer prov:wasRevisionOf :older`
+1. The _data flow view_ helps us represent the flow of information within a system. Entities are the things we want to describe the provenance of (`prov:Entity`). Entities are derived from other entities (`prov:wasDerivedFrom`). For example, within a version control system, we would describe that each revision as an entity and the newer version was derived from the older revision. e.g. `:newer prov:wasRevisionOf :older`
 
 2. The _process flow view_ helps us represent the processes that took place in a system and associated timing. `prov:Activity` denotes these processes. Activities are related to the information (i.e. entities) they take as input and generate as output. Represented respectively by `prov:used` and `prov:wasGeneratedBy`. For example, we might have a program such as curl take some input (a url) and generate some output (a downloaded web page).
 
@@ -104,7 +104,7 @@ More importantly, you can convert to other serializations/file formats like JSON
 This is an important design decision behind PROV. It always one to interchange provenance between different common web formats.
 
 ### Querying
-Now that we have a view of the example, let's see what we can acccess. Will look at the data flow of the example. First, we'll find all the Entity's using SPARQL.
+Now that we have a view of the example, let's see what we can access. Will look at the data flow of the example. First, we'll find all the entities using SPARQL.
 
     $ roqet -i sparql -e 'select ?s where {?s a <http://www.w3.org/ns/prov#Entity>}' -r csv --data primer-example.ttl
 
