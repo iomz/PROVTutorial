@@ -1,6 +1,6 @@
 #Welcome
 
-[Data provenance](http://en.wikipedia.org/wiki/Provenance#Data_provenance) - information about entities, activities, and people involved in producing a piece of data or thing - is becoming a crucial component in information systems. Whether it's the version history of software ((like github) or maintaing attribution as documents are created (think [CC-BY](https://wiki.creativecommons.org/Best_practices_for_attribution)), provenance is becoming widely available.
+[Data provenance](http://en.wikipedia.org/wiki/Provenance#Data_provenance) - information about entities, activities, and people involved in producing a piece of data or thing - is becoming a crucial component in information systems. Whether it's the version history of software ((like github) or maintaining attribution as documents are created (think [CC-BY](https://wiki.creativecommons.org/Best_practices_for_attribution)), provenance is becoming widely available.
 
 To help work with provenance coming from multiple different systems, the W3C specified a common model and serializations for provenance, [PROV](http://www.w3.org/TR/2013/NOTE-prov-overview-20130430/).  
 
