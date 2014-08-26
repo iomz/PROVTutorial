@@ -25,7 +25,14 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/
 echo "export LC_ALL=en_US.UTF-8" >> .bashrc
 echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/" >> .bashrc
 echo "export PATH=$PATH:/usr/local/bin/provToolbox/bin" >> .bashrc
+echo "export JENAROOT=/usr/local/bin/apache-jena-2.12.0" >> .bashrc
+echo "export PATH=$PATH:$JENAROOT/bin" >> .bashrc
 echo "update-alternatives --set java /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java" >> .bashrc
+
+curl -O http://apache.websitebeheerjd.nl//jena/binaries/apache-jena-2.12.0.zip
+unzip apache-jena-2.12.0.zip
+sudo mv ./apache-jena-2.12.0 /usr/local/bin
+
 
 curl -O http://search.maven.org/remotecontent?filepath=org/openprovenance/prov/toolbox/0.6.1/toolbox-0.6.1-release.zip
 unzip toolbox-0.6.1-release.zip
