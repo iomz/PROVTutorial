@@ -70,7 +70,7 @@ The VM also sets the appropriate environment variables.l
 
 # PROV Core Concepts
 
-The figure below (taken from the [PROV Primer](http://www.w3.org/TR/prov-primer/)) shows the 3 core classes of PROV and how they are related. The PROV Primer provides more details and a working example. Here, will go with the basics so we can start querying datasets.
+The figure below (taken from the [PROV Primer](http://www.w3.org/TR/prov-primer/)) shows the 3 core classes of PROV and how they are related. The PROV Primer provides more details and a working example. Here, we'll go with the basics so we can start querying datasets.
 
 ![PROV Core Concepts](http://www.w3.org/TR/prov-primer/images/key-concepts.png)
 
