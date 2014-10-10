@@ -209,3 +209,5 @@ Here are some current ideas for projects to do with provenance:
 
 ___
 prov:wasAttributedTo [Paul Groth](https://twitter.com/pgroth)
+
+This project was supported by the Dutch national programme [COMMIT](http://www.commit-nl.nl) in the [Data2Semantics project](http://www.data2semantics.org) .
